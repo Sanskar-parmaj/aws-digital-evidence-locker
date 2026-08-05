@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# AWS / credentials — never commit these
+.aws/
+*.pem
+credentials
+config
+
+# Local environment variables
+.env
+
+# Packaging artifacts
+*.zip
+build/
+dist/
+*.egg-info/
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/

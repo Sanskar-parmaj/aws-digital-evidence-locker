@@ -1,0 +1,72 @@
+DIGITAL EVIDENCE LOCKER
+=======================
+
+AWS REGION:
+us-east-1
+
+S3 BUCKET:
+digital-evidence-locker-<YOUR_ACCOUNT_ID>
+
+LAMBDA FUNCTION:
+DigitalEvidenceProcessor
+
+S3 STRUCTURE:
+
+incoming/
+audit/
+  current/
+  history/
+
+PROCESSING FLOW:
+
+User uploads file
+        |
+        v
+S3 incoming/
+        |
+        v
+S3 ObjectCreated event
+        |
+        v
+Lambda DigitalEvidenceProcessor
+        |
+        +--> Read metadata
+        |
+        +--> Calculate SHA-256
+        |
+        +--> Compare previous hash
+        |
+        +--> Determine ORIGINAL / UNCHANGED / MODIFIED
+        |
+        +--> Create audit history record
+        |
+        +--> Update current record
+        |
+        v
+S3 audit/
+        |
+        v
+CloudWatch Logs
+
+AWS SERVICES USED:
+- Amazon S3
+- AWS Lambda
+- AWS IAM
+- Amazon CloudWatch
+- AWS CloudShell
+
+AUDIT RECORD TYPES:
+- ORIGINAL
+- UNCHANGED
+- MODIFIED
+
+AUDIT HISTORY:
+audit/history/<file_id>/<timestamp>.json
+
+CURRENT RECORD:
+audit/current/<file_id>.json
+
+NOTE:
+<YOUR_ACCOUNT_ID> is a placeholder. Replace it with your own 12-digit
+AWS account ID when deploying. S3 bucket names must be globally unique,
+so suffixing with your account ID is a common and reliable convention.
