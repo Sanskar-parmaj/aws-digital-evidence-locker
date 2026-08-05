@@ -64,6 +64,39 @@ function processes it and the CLI can immediately report on it.
 See [`docs/architecture.md`](docs/architecture.md) for a full breakdown
 of the data flow, record format, and hash-chaining design.
 
+## Demonstration
+
+The system was tested through a complete file-integrity workflow:
+
+1. A new file is uploaded → `ORIGINAL`
+2. The same file is uploaded again → `UNCHANGED`
+3. The file content is changed → `MODIFIED`
+4. The CLI provides a dashboard for inspecting the resulting records
+
+### S3 Storage
+
+![S3 Bucket](docs/screenshots/01-s3-bucket-root.png)
+
+### Event-Driven Processing
+
+![Lambda Trigger Configuration](docs/screenshots/05-lambda-trigger-configuration.png)
+
+### Original File Detection
+
+![Original Detection](docs/screenshots/07-cloudwatch-original-detection.png)
+
+### Unchanged File Detection
+
+![Unchanged Detection](docs/screenshots/08-cloudwatch-unchanged-detection.png)
+
+### Modified File Detection
+
+![Modified Detection](docs/screenshots/10-cloudwatch-modified-detection.png)
+
+### CLI Dashboard
+
+![CLI Dashboard](docs/screenshots/13-cli-dashboard.png)
+
 ## Features
 
 - **SHA-256 fingerprinting** — every file is hashed on upload by
