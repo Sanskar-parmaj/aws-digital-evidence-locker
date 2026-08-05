@@ -1,0 +1,2 @@
+This is a sample digital evidence file.
+It is used to demonstrate first-seen file recording.

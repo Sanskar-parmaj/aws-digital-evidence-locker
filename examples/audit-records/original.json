@@ -1,0 +1,13 @@
+{
+  "filename": "demo-evidence.txt",
+  "bucket": "digital-evidence-locker-<YOUR_ACCOUNT_ID>",
+  "key": "incoming/demo-evidence.txt",
+  "size": 93,
+  "content_type": "text/plain",
+  "sha256": "e1e8e9583bed9a43a170d93cfd855d5b91f8e885ba8d8d32eb890ec218eecb84",
+  "received_at": "2026-08-04T10:00:00+00:00",
+  "status": "ORIGINAL",
+  "file_id": "dc2d022041c3eb793bc1f17612d1a39ecb014cc96d2a9444ff3f12257e5dc2af",
+  "previous_record_hash": null,
+  "audit_record_hash": "e1c2dce285720f6db3d9a7a2e5e49f5ba0bdf7c00c9560055542fc57ee628c04"
+}

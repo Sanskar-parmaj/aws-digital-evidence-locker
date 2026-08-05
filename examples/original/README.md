@@ -1,9 +1,10 @@
-This folder is meant to hold a pristine, never-modified sample file —
-demonstrating what the locker records as `status: ORIGINAL` on first
-upload.
+# Original Evidence Example
 
-The files currently available (`chain-test.txt`, `demo-evidence.txt`)
-already reflect a post-modification state, so they've been placed in
-`examples/modified/` instead. To fill this folder in properly, upload a
-fresh, untouched file to `incoming/` and save it here alongside its
-resulting `ORIGINAL` audit record (see Phase 7 — Add Evidence).
+This directory contains a sample file representing the initial observation
+of an evidence file by the Digital Evidence Locker.
+
+When first uploaded, the file is assigned the integrity status:
+
+`ORIGINAL`
+
+The sample file contains dummy test data and does not represent real evidence.
