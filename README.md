@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AWS Digital Evidence Locker
 
 A serverless file-integrity monitoring system built with AWS.
@@ -221,3 +222,6 @@ This project was originally built and demonstrated in an AWS Academy Learner Lab
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
+=======
+# aws-digital-evidence-locker
+>>>>>>> b6df583679985f51b0ffcac7550db7fae043a461
