@@ -33,3 +33,7 @@ dist/
 .DS_Store
 .vscode/
 .idea/
+
+# Vite cache
+frontend/.vite/
+.vite/
